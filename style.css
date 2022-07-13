@@ -3,12 +3,13 @@
 *{
     text-decoration: none;
 }
+
 @media  screen and (min-width: 600px) {
     
     .icon--mobile{
         display: none;
     }
-    .Juliosomo-comment{
+    .Juliosomo-comment--mobile{
         display: none;
     }
     .delete-reply--mobile{
@@ -31,6 +32,10 @@
         height: 40px;
         width: 40px;
     }
+    .user--image{
+        border-radius: 50%;
+        border: 3px solid rgba(150, 1, 248, 0.8);
+    }
     article{
         display: flex;
         align-items: center;
@@ -39,6 +44,7 @@
         background-color: hsl(0, 0%, 100%);
         gap: 20px;
         padding: 20px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     }
     .plus-12-minus--desktop{
     align-items: center;
@@ -46,6 +52,7 @@
     background-color: hsl(228, 33%, 97%);
     border-radius: 10px;
     padding: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     }   
     .fa-minus, .fa-plus{
         color: hsl(211, 10%, 45%);
@@ -89,9 +96,17 @@
     .reply--desktop{
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 5px;
         color: hsl(238, 40%, 52%);
         cursor: pointer;
+    }
+    .reply--desktop i{
+        color: hsl(238, 40%, 52%);
+        font-size: 15px;
+    }
+    .reply--desktop a h3{
+        color: hsl(238, 40%, 52%);
+        font-size: 15px;
     }
     .you--reply--desktop{
         display: flex;
@@ -256,12 +271,12 @@ body{
     font-size: 16px;
 }
 article{
-    /* display: flex; */
     flex-direction: column;
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
     margin: 20px auto;
     padding: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 .comment{
     padding: 20px;
@@ -270,31 +285,36 @@ article{
     display: flex;
     gap: 20px;
 }
-.Juliosomo-comment{
+.Juliosomo-comment--mobile{
     display: flex;
     flex-direction: column;
 }
-.Juliosomo-comment input{
+.Juliosomo-comment--mobile textarea{
     height: 100px;
     max-width: 100%;
     margin: 20px;
     border: 2px solid hsl(223, 19%, 93%);
     border-radius: 10px;
+    resize: none;
+    padding: 20px;
 }
-.Juliosomo-comment input::placeholder{
+.Juliosomo-comment--mobile textarea:focus{
+    border: 2px solid hsl(238, 40%, 52%) !important;
+    outline: none;
+}
+.Juliosomo-comment--mobile textarea::placeholder{
     color: hsl(211, 10%, 45%);
     font-weight: 700;
     position: absolute;
-    top: 10px;
-    padding-left: 20px;
+    top: 20px;
 }
-.Juliosomo-comment div{
+.Juliosomo-comment--mobile div{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
-.Juliosomo-comment div .btn{
+.Juliosomo-comment--mobile div .btn{
     color: hsl(0, 0%, 100%);
     background-color: hsl(238, 40%, 52%);
     border-radius: 10px;
@@ -305,10 +325,19 @@ article{
     font-family: inherit;
     font-size: inherit;
     cursor: pointer;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
-.Juliosomo-comment div img{
+.Juliosomo-comment--mobile div .btn:active{
+    background-color: transparent;
+    color:  hsl(238, 40%, 52%);
+    border: 2px solid  hsl(238, 40%, 52%);
+
+}
+.Juliosomo-comment--mobile div img{
     height: 30px;
     width: 30px;
+    border-radius: 50%;
+    border: 3px solid rgba(150, 1, 248, 0.8);
 }
 .icon--mobile{
     display: flex;
@@ -325,6 +354,7 @@ article{
     width: 85px;
     border-radius: 10px;
     padding: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 .icon--mobile div .fa-plus, .fa-minus{
     color: hsl(211, 10%, 45%);
@@ -333,20 +363,22 @@ article{
 .icon--mobile div h4{
     color: hsl(238, 40%, 52%);
 }
-.icon--mobile .delete-reply-mobile{
-    background-color: green;
-}
+
 .icon--mobile .reply{
     display: flex;
     margin-left: auto;
     align-items: center;
     gap: 5px;
 }
+.icon--mobile .reply a h5{
+    color: hsl(238, 40%, 52%);
+}
 .icon--mobile .delete{
     display: flex;
     align-items: center;
     gap: 5px;
     color: hsl(358, 79%, 66%);
+    font-size: 13px;
 }
 .icon--mobile .delete a{
     text-decoration: none;
@@ -358,6 +390,9 @@ article{
 .delete-reply--mobile{
     display: flex;
     margin-left: auto;
+}
+.delete-reply--mobile .reply a h5{
+    color: hsl(238, 40%, 52%);
 }
 .fa-reply{
     color: hsl(238, 40%, 52%);
@@ -376,6 +411,10 @@ article{
     display: flex;
     align-items: center;
     gap: 20px;
+}
+.user--image{
+    border-radius: 50%;
+    border: 3px solid rgba(150, 1, 248, 0.8);
 }
 img{
     width: 30px;
