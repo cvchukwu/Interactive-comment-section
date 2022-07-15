@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Repo URL: https://cvchukwu.github.io/3-column-card-using-Flexbox/
-- Live Site URL: https://cvchukwu.github.io/3-column-card-using-Flexbox/
+- Repo URL: https://github.com/cvchukwu/Interactive-comment-section
+- Live Site URL: https://cvchukwu.github.io/Interactive-comment-section/
 
 ## My process
 
